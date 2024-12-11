@@ -8,7 +8,7 @@ $requests = array_diff_key($requests, array('hmac' => ''));
 ksort($requests);
 
 $token = "YOUR_ACCESS_TOKEN"; // The access token you received after app installation
-$shop = "YOUR_SHOP_URL"; // Your Shopify store's subdomain (e.g., "your-store.myshopify.com")
+$shop = "https://7r4f3s-11.myshopify.com"; // Your Shopify store's subdomain (e.g., "your-store.myshopify.com")
 
 // Make a call to Shopify API to retrieve customers
 $customers = shopify_call($token, $shop, "/admin/api/2024-01/customers.json", array(), 'GET');
