@@ -6,7 +6,7 @@ Dotenv\Dotenv::createImmutable(__DIR__)->load(); // Load .env file
 $shop = $_GET['shop'];
 $api_key = getenv('API_KEY'); // Retrieve the API key from the .env file
 $scopes = "read_orders,read_customers";
-$redirect_uri = "http://github.COM/F8THEM8/shopify-customer-viewer/custom_app/generate_token.php";
+$redirect_uri = "https://shopify-customer-viewer.vercel.app/custom_app/generate_token.php";
 
 // Build the installation URL
 $install_url = "https://" . $shop . "/admin/oauth/authorize?client_id=" . $api_key . "&scope=" . $scopes . "&redirect_uri=" . urlencode($redirect_uri);
